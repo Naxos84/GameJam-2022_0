@@ -1,6 +1,12 @@
-<tw-storydata name="M&amp;M Nacht" startnode="37" creator="Twine" creator-version="2.3.16" ifid="5D621C44-C372-4D8D-BB4E-BA70F500AACB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Zimmer Schlafparty" tags="" position="1359.3333333333333,684" size="100,100">[[0. Stock Flur]]
-</tw-passagedata><tw-passagedata pid="2" name="0. Stock Flur" tags="" position="1081,874" size="100,100">[[Badezimmer]]
-[[Etage hoch gehen-&gt;1. Stock Flur]]
+<tw-storydata name="M&amp;M Nacht" startnode="37" creator="Twine" creator-version="2.3.16" ifid="5D621C44-C372-4D8D-BB4E-BA70F500AACB" zoom="0.6" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Zimmer Schlafparty" tags="" position="1359.3333333333333,684" size="100,100">#Kinderzimmer
+
+Das ist dein Kinderzimmer. Deine Freunde sitzen auf Ihren Betten und warten darauf dass du die nötigen Süßigkeiten besorgst.
+
+[[zum Flur gehen-&gt;0.Stock Flur]]</tw-passagedata><tw-passagedata pid="2" name="0.Stock Flur" tags="" position="1081,874" size="100,100">(set: $collectedSweets to it + 1)(rerun:?updateSweets)
+#Flur im Ergeschoss
+
+[[gehe ins Badezimmer]]
+[[gehe eine Etage nach oben-&gt;1. Stock Flur]]
 [[Wohnzimmer]]
 [[Küche]]
 [[Zimmer Schlafparty]]
@@ -8,15 +14,15 @@
 [[Schlafzimmer Eltern]]
 [[Gästezimmer]]
 
-[[Etage runter-&gt;0. Stock Flur]] </tw-passagedata><tw-passagedata pid="4" name="Badezimmer" tags="" position="1305,1073" size="100,100">[[Toilette]]
+[[Etage runter-&gt;0.Stock Flur]] </tw-passagedata><tw-passagedata pid="4" name="Badezimmer" tags="" position="1305,1073" size="100,100">[[Toilette]]
 [[Dusche]]
 [[Badeschrank]]
 
-[[0. Stock Flur]] </tw-passagedata><tw-passagedata pid="5" name="Wohnzimmer" tags="" position="482,896" size="100,100">[[Esstisch]]
+[[0.Stock Flur]] </tw-passagedata><tw-passagedata pid="5" name="Wohnzimmer" tags="" position="482,896" size="100,100">[[Esstisch]]
 [[Truhe]]
 [[Snackschrank]]
 
-[[0. Stock Flur]] </tw-passagedata><tw-passagedata pid="6" name="Dachboden" tags="" position="1014,431" size="100,100">[[Alte Truhe]]
+[[0.Stock Flur]] </tw-passagedata><tw-passagedata pid="6" name="Dachboden" tags="" position="1014,431" size="100,100">[[Alte Truhe]]
 [[Schrank]]
 [[Karton 1]]
 [[Karton 2]]
@@ -40,18 +46,25 @@
 [[Tisch]]
 [[Ofen]]
 
-[[0. Stock Flur]] </tw-passagedata><tw-passagedata pid="11" name="Küchenregal 1" tags="" position="606,1464" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="12" name="Küchenregal 2" tags="" position="757,1463" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="13" name="Küchenregal 3" tags="" position="904,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="14" name="Küchenregal 4" tags="" position="1056,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="15" name="Kühlschrank" tags="" position="1206,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="16" name="Tisch" tags="" position="1356,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="17" name="Ofen" tags="" position="1506,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="18" name="Toilette" tags="" position="1176,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="19" name="Dusche" tags="" position="1305,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="20" name="Badeschrank" tags="" position="1455,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="21" name="Esstisch" tags="" position="466,1100" size="100,100">[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="22" name="Truhe" tags="" position="601,1100" size="100,100">ist verriegelt mit ein Schlüssel was im Schlafzimmer der Eltern liegt
-[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="23" name="Snackschrank" tags="" position="801,1115" size="100,100">[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="24" name="Schrank" tags="" position="911,265" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="25" name="Karton 1" tags="" position="1154,264" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Alte Truhe" tags="" position="682,287" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="27" name="Garten" tags="" position="1718,798" size="100,100">[[Eingangstür]]</tw-passagedata><tw-passagedata pid="28" name="Eingangstür" tags="" position="1686,971" size="100,100">[[0. Stock Flur]] 
+[[0.Stock Flur]] </tw-passagedata><tw-passagedata pid="11" name="Küchenregal 1" tags="" position="606,1464" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="12" name="Küchenregal 2" tags="" position="757,1463" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="13" name="Küchenregal 3" tags="" position="904,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="14" name="Küchenregal 4" tags="" position="1056,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="15" name="Kühlschrank" tags="" position="1206,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="16" name="Tisch" tags="" position="1356,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="17" name="Ofen" tags="" position="1506,1466" size="100,100">[[Küche]]</tw-passagedata><tw-passagedata pid="18" name="Toilette" tags="" position="1176,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="19" name="Dusche" tags="" position="1305,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="20" name="Badeschrank" tags="" position="1455,1223" size="100,100">[[Badezimmer]]</tw-passagedata><tw-passagedata pid="21" name="Esstisch" tags="" position="466,1100" size="100,100">[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="22" name="Truhe" tags="" position="601,1100" size="100,100">ist verriegelt mit ein Schlüssel was im Schlafzimmer der Eltern liegt
+[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="23" name="Snackschrank" tags="" position="801,1115" size="100,100">[[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="24" name="Schrank" tags="" position="911,265" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="25" name="Karton 1" tags="" position="1154,264" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Alte Truhe" tags="" position="682,287" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="27" name="Garten" tags="" position="1718,798" size="100,100">[[Eingangstür]]</tw-passagedata><tw-passagedata pid="28" name="Eingangstür" tags="" position="1686,971" size="100,100">[[0.Stock Flur]] 
 
 draußen ist nichts und es wird dunkel</tw-passagedata><tw-passagedata pid="29" name="Bett Gästezimmer" tags="" position="439,549" size="100,100">[[Gästezimmer]] </tw-passagedata><tw-passagedata pid="30" name="Bett Eltern" tags="" position="1497,451" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="31" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="32" name="Kleiderschrank Eltern" tags="" position="1499,317" size="100,100">Schlüssel für die Truhe im Wohnzimmer
 
-[[Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="33" name="Koffer" tags="" position="584,716" size="100,100">[[Gästezimmer]] </tw-passagedata><tw-passagedata pid="34" name="Startup" tags="startup" position="2183.3333333333335,177.66666666666663" size="100,100">(set: $count to 10,
+[[Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="33" name="Koffer" tags="" position="584,716" size="100,100">Du siehst den Koffer vor dir.
+(link-reveal: &quot;Schüttel ihn&quot;)[Du schüttelst den Koffer. Irgendwas scheint da drin zu sein.]
+(link-reveal: &quot;Öffne den Koffer&quot;)[Du öffnest vorsichtig den Koffer.....
+....
+... und findest 3 Süßigkeiten.(set: $collectedSweets to it + 3)]
+
+[[Gästezimmer]] </tw-passagedata><tw-passagedata pid="34" name="Startup" tags="startup" position="2183.3333333333335,177.66666666666663" size="100,100">(set: $count to 10,
 	$collectedSweets to 0)</tw-passagedata><tw-passagedata pid="35" name="Header" tags="header" position="2183.3333333333335,292.5" size="100,100">(unless: (passage:)&#39;s tags contains &quot;no-header&quot;)[
 |parents&gt;[Deine Eltern kommen in $count Sekunden (if: $count &lt; 1)[(go-to:&quot;Ende&quot;)]]
+|updateSweets&gt;[Du hast bereits $collectedSweets / 10 Süßigkeiten gefunden]
 (live:1.0s)[
 	(set: $count to it -1)(rerun:?parents)]
 ]</tw-passagedata><tw-passagedata pid="36" name="Ende" tags="no-header" position="2183.3333333333335,420.83333333333337" size="100,100">Deine Eltern sind da. Es ist Zeit ins Bett zu gehen.
-(if: $collectedSweets &gt; 10)[Zum Glück hast du außreichend Süßigkeiten gefunden, damit die Freune glücklich sind und ihr zusammen eine tolle Nacht habt.](else:)[Deine Freunde sind traurig, weil du nicht genug Süßigkeiten gefunden hast. (click: &quot;Beim nächsten mal&quot;)[(restart:)]Beim nächsten mal hast du sicherlich mehr Glück]</tw-passagedata><tw-passagedata pid="37" name="Start" tags="" position="1500,779.1666666666667" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
+(if: $collectedSweets &gt; 10)[Zum Glück hast du außreichend Süßigkeiten gefunden, damit die Freune glücklich sind und ihr zusammen eine tolle Nacht habt. (click: &quot;Beim nächsten mal&quot;)[ findest du bestimmt noch mehr Süßigkeiten.]](else:)[Deine Freunde sind traurig, weil du nicht genug Süßigkeiten gefunden hast. (click: &quot;Beim nächsten mal&quot;)[(restart:)]Beim nächsten mal hast du sicherlich mehr Glück]</tw-passagedata><tw-passagedata pid="37" name="Start" tags="debug" position="1500,779.1666666666667" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
 Du hast Videospiele und Getränke besorgt.
 Aber es fehlen noch die Süßigkeiten.
 
@@ -59,5 +72,9 @@ Deine Eltern werden allerdings in wenigen Momenten auftauchen, um dir mitzuteile
 
 Du musst unbedingt ein paar Süßigkeiten finden, damit du und deine Freunde eine tolle Nacht haben werdet.
 
-[[Auf gehts-&gt;Zimmer Schlafparty]] </tw-passagedata></tw-storydata>
+[[Auf gehts-&gt;Zimmer Schlafparty]] </tw-passagedata><tw-passagedata pid="38" name="gehe ins Badezimmer" tags="" position="1081,1024" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="39" name="Footer" tags="footer" position="2305,297.50000000000006" size="100,100">(if: (passage:)&#39;s tags contains any of (a:&quot;debug&quot;))[---
+SourceCode:&lt;br&gt;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s source)]\
+---
+Passage-Name: &#39;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s name)]&#39;\
+Tags: &#39;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s source)]&#39;]</tw-passagedata></tw-storydata>
 
