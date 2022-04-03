@@ -3,7 +3,7 @@
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Zimmer Schlafparty" tags="" position="1359,684" size="100,100">
 ##Kinderzimmer
 
-Das ist dein Kinderzimmer. Deine Freunde sitzen auf Ihren Betten und warten darauf dass du die nötigen Süßigkeiten besorgst.
+Das ist dein Kinderzimmer. Dein bester Freund sitzt auf seinem Bett und wartet darauf dass du die nötigen Süßigkeiten besorgst.
 
 [[zum Flur gehen-&gt;0.Stock Flur]]</tw-passagedata><tw-passagedata pid="2" name="0.Stock Flur" tags="" position="1081,873" size="100,100">&lt;!--(set: $collectedSweets to it + 1)(rerun:?updateSweets)--&gt;
 
@@ -14,7 +14,7 @@ Der Flur im Erdgeschoss ist hell beleuchtet. Es gibt keine Stelle wo das Licht n
 gehe [[eine Etage nach oben-&gt;1. Stock Flur]]
 gehe ins [[Wohnzimmer]]
 gehe in die [[Küche]]
-gehe in dein Zimmer[[Zimmer Schlafparty]]
+gehe in dein [[Zimmer-&gt;Zimmer Schlafparty]]
 gehe zur [[Eingangstür]] </tw-passagedata><tw-passagedata pid="3" name="1. Stock Flur" tags="" position="1028,614" size="100,100">
 ##Flur Obergeschoss
 
@@ -82,7 +82,7 @@ einen [[Ofen]]
 Zurück zum [[Flur-&gt;0.Stock Flur]] </tw-passagedata><tw-passagedata pid="10" name="Küchenregal 1" tags="" position="606,1464" size="100,100">
 ##Küchenregal No.1
 
-Ein Küchenregal, mit lauter Pfannen und Töpfe.
+Ein Küchenregal, mit lauter Pfannen und Töpfen.
 Hier wirst du keine Süßigkeiten finden können.
 
 Zurück zur Küche [[Küche]]</tw-passagedata><tw-passagedata pid="11" name="Küchenregal 2" tags="" position="757,1462" size="100,100">
@@ -127,7 +127,7 @@ Zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="16" name="Esstisch" 
 ##Esstisch
 
 Der Esstisch steht noch unaufgeräumt mit dem Essen von heute Abend.
-Pizza und Softdrink Reste bedecken den Tisch, aber keine Sicht von irgendwelche Süßigkeiten.
+Pizza und Softdrink Reste bedecken den Tisch, (link-reveal: &quot;aber&quot;)[ keine Süßigkeiten in Sicht].
 
 zurück zum [[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="17" name="Truhe" tags="" position="603,1099" size="100,100">(if: $hasChestKey)[
 	Du hast den Schlüssel für die Truhe gefunden.
@@ -173,7 +173,7 @@ Die gesamte Wäsche wurde durchgewühlt und du konntest auch keine Süßigkeiten
 ]
 
 
-zurück zum Schlafzimmer [[Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="25" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
+zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="25" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
 (link: &quot;Schüttel ihn&quot;)[Du schüttelst den Koffer. Irgendwas scheint da drin zu sein.]
 (link: &quot;Öffne den Koffer&quot;)[Du öffnest vorsichtig den Koffer
 	(link: &quot;Noch ein Stück&quot;)[\
@@ -185,7 +185,7 @@ zurück zum Schlafzimmer [[Schlafzimmer Eltern]] </tw-passagedata><tw-passagedat
 
 [[Gästezimmer]] </tw-passagedata><tw-passagedata pid="27" name="Startup" tags="startup" position="2183,177" size="100,100">&lt;!-- Change count to have more time --&gt;
 
-(set: $count to 60,
+(set: $count to 1000,
 	$collectedSweets to 0,
 	$neededSweets to 10,
 	$hasChestKey to false,
@@ -229,7 +229,7 @@ Dein Freund ist leider ein bisschen traurig, dass du nur $collectedSweets Süßi
 
 (click: &quot;Beim nächsten mal&quot;)[(restart:)]
 
-[[Wer hats gemacht?]]</tw-passagedata><tw-passagedata pid="30" name="Start" tags="debug no-header" position="1500,779" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
+[[Wer hats gemacht?]]</tw-passagedata><tw-passagedata pid="30" name="Start" tags="no-header" position="1500,779" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
 Du hast Videospiele und Getränke besorgt.
 Aber es fehlen noch die Süßigkeiten.
 
