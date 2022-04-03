@@ -33,7 +33,9 @@ Früher fandest du das (link-reveal: &quot;doof&quot;)[\
 Du siehst:
 einen [[Esstisch]]
 eine (link-goto: &quot;Truhe&quot;)
-einen (link-reveal: &quot;Snackschrank&quot;)[ und natürlich sind im Snackschrank ($collectSweets: 2, &quot;2 Süßigkeiten&quot;). Das war einfach.]
+(unless: $lootedSnackBoard)[
+einen (link-reveal: &quot;Snackschrank&quot;)[ und natürlich sind im Snackschrank ($collectSweets: 2, &quot;2 Süßigkeiten&quot;). Das war einfach. (set: $lootedSnackBoard to true)]
+](else:)[einen Snackschrank, der inzwischen leer ist]
 
 Zurück in den [[Flur-&gt;0.Stock Flur]] </tw-passagedata><tw-passagedata pid="5" name="Dachboden" tags="" position="1014,431" size="100,100">
 ##Dachboden
@@ -60,7 +62,7 @@ gehe zum [[Flur-&gt;1. Stock Flur]] </tw-passagedata><tw-passagedata pid="8" nam
 
 Hier habt ihr oft im Sommer Frühstück gegessen. Du fandest das immer super. Inzwischen esst ihr aber meistens im Garten.
 
-(event: when time &gt; 15s)[Moment mal. Was blitzt dich denn dort an? Was ist (link-reveal: &quot;das?&quot;)[ das? WOW. Das sind 2 M&amp;M&#39;s deine Lieblingssüßigkeit. Was man nicht alles so findet. (set: $collectedMundMs to true)]]
+(unless: $collectedMundMs)[(event: when time &gt; 15s)[Moment mal. Was blitzt dich denn dort an? Was ist (link-reveal: &quot;das?&quot;)[ das? WOW. Das sind 2 M&amp;M&#39;s deine Lieblingssüßigkeit. Was man nicht alles so findet. (set: $collectedMundMs to true)]]]
 
 zum [[Garten]] runterspringen
 ins [[Schlafzimmer-&gt;Schlafzimmer Eltern]] der Eltern gehen</tw-passagedata><tw-passagedata pid="9" name="Küche" tags="" position="1056,1315" size="100,100">
@@ -118,8 +120,8 @@ zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="14" name="Tisch" tag
 
 so ein leeren Tisch hast du noch nie gesehen.
 
-Zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="15" name="Ofen" tags="" position="1506,1466" size="100,100">Der gute alte Ofen. Es wurden schon so viele leckere Sachen mit ihm gemacht (link: &quot;...&quot;)[Irgendwas scheint da drin zu sein.
-(link: &quot;Ofen öffnen&quot;)[($collectSweets: 5, &quot;Klasse. 5 Süßigkeiten auf einem Haufen.&quot;)]]
+Zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="15" name="Ofen" tags="" position="1506,1466" size="100,100">Der gute alte Ofen. Es wurden schon so viele leckere Sachen mit ihm gemacht (unless: $lootedOven)[(link: &quot;...&quot;)[Irgendwas scheint da drin zu sein.
+(link: &quot;Ofen öffnen&quot;)[($collectSweets: 5, &quot;Klasse. 5 Süßigkeiten auf einem Haufen.&quot;)(set: $lootedOven to true)]]]
 
 Zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="16" name="Esstisch" tags="" position="385,1089" size="100,100">
 ##Esstisch
@@ -127,15 +129,20 @@ Zurück zur [[Küche]]</tw-passagedata><tw-passagedata pid="16" name="Esstisch" 
 Der Esstisch steht noch unaufgeräumt mit dem Essen von heute Abend.
 Pizza und Softdrink Reste bedecken den Tisch, (link-reveal: &quot;aber&quot;)[ keine Süßigkeiten in Sicht].
 
-zurück zum [[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="17" name="Truhe" tags="" position="603,1099" size="100,100">(if: $hasChestKey)[
+zurück zum [[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="17" name="Truhe" tags="" position="603,1099" size="100,100">(if: $lootedChest)[
+Die Truhe steht offen. Hier hast du bereits gesucht und natürlich auch ein paar Süßigkeiten gefunden.
+](else:)[
+(if: $hasChestKey)[
 	Du hast den Schlüssel für die Truhe gefunden.
 	(link-reveal: &quot;Du öffnest die Truhe&quot;)[
 		($collectSweets: 2, &quot; und findest 2 Süßigkeiten&quot;)
+		(set: $lootedChest to true)
 	]
 ](else:)[
 	Die Truhe deiner Eltern ist leider verschlossen. Das bedeutet Sie verstecken darin irgendwas wichtiges.
 	Vielleicht Süßigkeiten?
 	Du solltest unbedingt (link-reveal: &quot;den Schlüssel dafür&quot;)[, der vermutlich im Schlafzimmer liegt,] finden.
+]
 ]
 
 Zurück zum [[Wohnzimmer]]</tw-passagedata><tw-passagedata pid="18" name="Schrank" tags="" position="911,265" size="100,100">
@@ -171,12 +178,16 @@ Die gesamte Wäsche wurde durchgewühlt und du konntest auch keine Süßigkeiten
 ]
 
 
-zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="24" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
-(link: &quot;Schüttel ihn&quot;)[Du schüttelst den Koffer. Irgendwas scheint da drin zu sein.]
+zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="25" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
+(link: &quot;Schüttel ihn&quot;)[(unless: $lootedLuggage)[Du schüttelst den Koffer. Irgendwas scheint da drin zu sein.](else:)[Du hörst nichts.]]
+
 (link: &quot;Öffne den Koffer&quot;)[Du öffnest vorsichtig den Koffer
 	(link: &quot;Noch ein Stück&quot;)[\
 		(link: &quot;...&quot;)[\
+		(unless: $lootedLuggage)[
 			($collectSweets: 3, &quot;und findest 3 Süßigkeiten&quot;)
+			(set: $lootedLuggage to true)
+			](else:)[Hier hast du bereits gesucht.]
 	 	]
 	]
 ]
@@ -187,7 +198,11 @@ zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passag
 	$collectedSweets to 0,
 	$neededSweets to 10,
 	$hasChestKey to false,
-	$collectedMundMs to false)
+	$collectedMundMs to false,
+	$lootedSnackBoard to false,
+	$lootedChest to false,
+	$lootedLuggage to false,
+	$lootedOven to false)
 	
 (set: $collectSweets to (macro: num-type _amount, str-type _text, [
 	(set: $collectedSweets to it + _amount)
