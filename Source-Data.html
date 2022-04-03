@@ -1,4 +1,4 @@
-<tw-storydata name="M&amp;M Nacht" startnode="28" creator="Twine" creator-version="2.3.16" ifid="5D621C44-C372-4D8D-BB4E-BA70F500AACB" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
+<tw-storydata name="M&amp;M Nacht" startnode="29" creator="Twine" creator-version="2.3.16" ifid="5D621C44-C372-4D8D-BB4E-BA70F500AACB" zoom="1" format="Harlowe" format-version="3.2.3" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar {
     display: none;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Zimmer Schlafparty" tags="" position="1359,684" size="100,100">
 ##Kinderzimmer
@@ -178,7 +178,7 @@ Die gesamte Wäsche wurde durchgewühlt und du konntest auch keine Süßigkeiten
 ]
 
 
-zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="25" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="26" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
+zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passagedata pid="24" name="Karton 2" tags="" position="1326,302" size="100,100">[[Dachboden]] </tw-passagedata><tw-passagedata pid="25" name="Koffer" tags="" position="584,715" size="100,100">Du siehst den Koffer vor dir.
 (link: &quot;Schüttel ihn&quot;)[(unless: $lootedLuggage)[Du schüttelst den Koffer. Irgendwas scheint da drin zu sein.](else:)[Du hörst nichts.]]
 
 (link: &quot;Öffne den Koffer&quot;)[Du öffnest vorsichtig den Koffer
@@ -192,9 +192,9 @@ zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passag
 	]
 ]
 
-[[Gästezimmer]] </tw-passagedata><tw-passagedata pid="25" name="Startup" tags="startup" position="2183,177" size="100,100">&lt;!-- Change count to have more time --&gt;
+[[Gästezimmer]] </tw-passagedata><tw-passagedata pid="26" name="Startup" tags="startup" position="2183,177" size="100,100">&lt;!-- Change count to have more time --&gt;
 
-(set: $count to 1000,
+(set: $count to 60,
 	$collectedSweets to 0,
 	$neededSweets to 10,
 	$hasChestKey to false,
@@ -208,7 +208,7 @@ zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passag
 	(set: $collectedSweets to it + _amount)
 	(rerun:?updateSweets)
 	(output:)[(print: _text)]
-]))</tw-passagedata><tw-passagedata pid="26" name="Header" tags="header" position="2183,292" size="100,100">(unless: (passage:)&#39;s tags contains &quot;no-header&quot;)[
+]))</tw-passagedata><tw-passagedata pid="27" name="Header" tags="header" position="2183,292" size="100,100">(unless: (passage:)&#39;s tags contains &quot;no-header&quot;)[
 |updateParents&gt;[
 (if: $count&gt;50)[Deine Eltern haben gerade gesagt das Sie gleich zu dir kommen werden.]\
 (else-if: $count &gt; 30)[Deine Eltern haben sich auf den Weg zu dir gemacht.]\
@@ -221,7 +221,7 @@ zurück zum [[Schlafzimmer-&gt;Schlafzimmer Eltern]] </tw-passagedata><tw-passag
 	(set: $count to it -1)(rerun:?updateParents)]\
 ]
 
-</tw-passagedata><tw-passagedata pid="27" name="Ende" tags="no-header" position="2183,420" size="100,100">Deine Eltern haben dich gefunden und schicken dich in dein Kinderzimmer.
+</tw-passagedata><tw-passagedata pid="28" name="Ende" tags="no-header" position="2183,420" size="100,100">Deine Eltern haben dich gefunden und schicken dich in dein Kinderzimmer.
 (if: $collectedMundMs)[\
 
 ##Easter-Egg Ende
@@ -242,7 +242,7 @@ Dein Freund ist leider ein bisschen traurig, dass du nur $collectedSweets Süßi
 
 (click: &quot;Beim nächsten mal&quot;)[(restart:)]
 
-[[Wer hats gemacht?]]</tw-passagedata><tw-passagedata pid="28" name="Start" tags="no-header" position="1500,779" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
+[[Wer hats gemacht?]]</tw-passagedata><tw-passagedata pid="29" name="Start" tags="no-header" position="1500,779" size="100,100">Du bist ein Kind das heute Abend eine richtig coole Pyjama Party mit deinen Freunden machen möchte.
 Du hast Videospiele und Getränke besorgt.
 Aber es fehlen noch die Süßigkeiten.
 
@@ -250,15 +250,15 @@ Deine Eltern werden allerdings in wenigen Momenten auftauchen, um dir mitzuteile
 
 Du musst unbedingt ein paar Süßigkeiten finden, damit du und deine Freunde eine tolle Nacht haben werdet.
 
-[[Auf gehts-&gt;Zimmer Schlafparty]] </tw-passagedata><tw-passagedata pid="29" name="Footer" tags="footer" position="2305,297" size="100,100">(if: (passage:)&#39;s tags contains any of (a:&quot;debug&quot;))[---
+[[Auf gehts-&gt;Zimmer Schlafparty]] </tw-passagedata><tw-passagedata pid="30" name="Footer" tags="footer" position="2305,297" size="100,100">(if: (passage:)&#39;s tags contains any of (a:&quot;debug&quot;))[---
 SourceCode:&lt;br&gt;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s source)]\
 ---
 Passage-Name: &#39;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s name)]&#39;\
-Tags: &#39;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s source)]&#39;]</tw-passagedata><tw-passagedata pid="30" name="Wer hats gemacht?" tags="no-header" position="2183,570" size="100,100">Wir sind Mehdi Ayadi und Matthias Kolley.
+Tags: &#39;(font:&quot;monospace&quot;)[(v6m-print:(passage:)&#39;s source)]&#39;]</tw-passagedata><tw-passagedata pid="31" name="Wer hats gemacht?" tags="no-header" position="2183,570" size="100,100">Wir sind Mehdi Ayadi und Matthias Kolley.
 
 Dieses Textadventure ist im Rahmen des Oster-Game-James 2022 entstanden.
 
-(link: &quot;Coole Sache. Lass es mich nochmal versuchen!&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="31" name="Infos" tags="" position="2195,803" size="100,100">&lt;!-- Kommentar --&gt;
+(link: &quot;Coole Sache. Lass es mich nochmal versuchen!&quot;)[(restart:)]</tw-passagedata><tw-passagedata pid="32" name="Infos" tags="" position="2195,803" size="100,100">&lt;!-- Kommentar --&gt;
 (link: &quot;Linktext&quot;)[Wird ersetzt durch]
 (link-reveal: &quot;Linktext&quot;)[ wird erweitert durch]
 (link-goto: &quot;Linktext der nicht funktioniert&quot;, &quot;Passagenname&quot;)&lt;!-- Das gleiche wie [[Linktext-&gt;Passagenname --&gt;
