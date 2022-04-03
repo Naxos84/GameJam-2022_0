@@ -1,0 +1,45 @@
+Hallo zusammen.
+
+Wir sind Mehdi Ayadi und Matthias Kolley und was passt bei den Vornamen besser als der Teamname "M&M"?
+Wir sind beides Softwareentwickler.
+
+Da wir nicht besonders viel Zeit hatten, Freitags lange unterwegs und am Wochenende will die Familie ja auch noch was von uns haben, haben wir entschieden
+ein Textadventure zu machen.
+Außerdem wird es bei uns in der Firma demnächst einen Girlsday geben und da suchen wir noch ein cooles Tool, mit dem die Mädels auf sehr einfache Weise ein Spiel
+basteln können.
+
+Nach einiger Recherche haben wir folgende Tools gefunden:
+- Inform 7
+- Twine
+- Quest 5
+und Renpy
+(Natürlich gibt es etliche weitere Tools)
+
+Twine und Renpy sind leider raus geflogen, weil sie nicht als Online Variante zur Verfügung stehen und außerdem sehr Text/Code lastig zu sein scheinen.
+Twine hingegen hat einen sehr einfachen Editor und mann kann sich sogar zwischen verschiedenen Schreibformaten entscheiden. Wir haben den Standard genommen (Harlowe).
+Quest 5 hat sogar einen Editor, mit dem man das programmieren mit einer Grafischen Oberfläche gestalten kann. Außerdem bringt Quest eine ganze Menge an Standardfunktionalitäten mit.
+Ein/Ausschaltbare Gegenstände, Gesundheitssystem, Inventar etc.
+
+Trotzdem haben wir uns für Twine entscheiden, weil man damit deutlich schneller ein Ergebnis erzielen kann. Nachteil: Wenn man irgendwelche Logiken will, muss man das alles selbst umsetzen.
+z.B. Ob der Spieler bereits eine bestimmte Süßigkeit gefunden hat.
+
+
+Zur SpielIdee:
+Wir wollten am Anfang auch eher in Richtung Camping/Horror oder so gehen und wollten als erstes eine Idee umsetzen, bei der man in 60 Sekunden genug Holz sammeln muss,
+damit man die Nacht über das Lagerfeuer brennen lassen kann und somit nicht von den Monstern gefressen wird.
+Dann fiel uns ein: "Mist das Spiel muss ja Kinderfreundlich sein".
+Dann hatten wir die Idee mit den Süßigkeiten.
+
+Mehdi hat dann ruck zuck die Haus Struktur aus dem Boden gestampt und die Räume entsprechen verlinkt.
+Im Anschluss habe ich die Logik für die 60 Sekunden, ein Rätsel, die Süßigkeiten und die Easter-Eggs eingebaut.
+Danach ging es darum die Räume wenigstens ein bisschen mit Content zu füllen. Das ist uns nur bedingt gelungen obwohl wir einige Räume aus dem Spiel genommen haben.
+Zum Schluss noch ein bisschen Bugfixing, weil man die gleichen Süßigkeiten immer wieder aufsammeln konnte.
+"Rein in den Raum -> aufsammeln -> raus aus dem Raum -> Rein in den Raum -> ......"
+
+
+Insgesamt hat es echt Spaß gemacht und für den anstehenden Girlsday werden wir Twine mit Harlowe nutzen.
+Wer von euch Bock hat das mal auszuprobieren sollte sich ruhig die eingangs genannten Tools anschauen. Besonders Inform 7 scheint sehr mächtig zu sein.
+
+Wenn ihr Fragen habt, dann schreibt uns einfach per Discord an.
+
+Danke.
